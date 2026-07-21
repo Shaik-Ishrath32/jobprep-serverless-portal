@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - JobPrep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 4h4v3h-4V4zm10 16H4V9h16v11z" fill="currentColor"/>
+                </svg>
+                <span>JobPrep</span>
+                <span class="subtitle">ADMIN PANEL</span>
+            </div>
+            <button class="admin-btn" onclick="window.location.href='index.html'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"/>
+                </svg>
+                Back to Portal
+            </button>
+        </header>
+
+        <div class="admin-container">
+            <div class="admin-controls">
+                <button id="refreshBtn" class="control-btn">🔄 Refresh</button>
+                <input type="text" id="searchInput" placeholder="Search by name, email, or position..." class="search-input">
+                <select id="filterPosition" class="filter-select">
+                    <option value="">All Positions</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                    <option value="DevOps Engineer">DevOps Engineer</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                </select>
+                <select id="filterStatus" class="filter-select">
+                    <option value="">All Status</option>
+                    <option value="New">New</option>
+                    <option value="Under Review">Under Review</option>
+                    <option value="Interview Scheduled">Interview Scheduled</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Accepted">Accepted</option>
+                </select>
+            </div>
+
+            <div id="statsContainer" class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Applications</h3>
+                    <p id="totalApps" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>New</h3>
+                    <p id="newApps" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Under Review</h3>
+                    <p id="reviewApps" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accepted</h3>
+                    <p id="acceptedApps" class="stat-number">0</p>
+                </div>
+            </div>
+
+            <div id="loadingMessage" class="loading">Loading applications...</div>
+            <div id="errorMessage" class="message error" style="display: none;"></div>
+
+            <div id="applicationsTable" class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Position</th>
+                            <th>Experience</th>
+                            <th>Status</th>
+                            <th>Applied Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicationsBody">
+                        <!-- Applications will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for viewing/editing application details -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Application Details</h2>
+            <div id="modalBody">
+                <!-- Details will be loaded here -->
+            </div>
+            <div class="modal-actions">
+                <select id="statusUpdate" class="status-select">
+                    <option value="New">New</option>
+                    <option value="Under Review">Under Review</option>
+                    <option value="Interview Scheduled">Interview Scheduled</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Accepted">Accepted</option>
+                </select>
+                <button id="updateStatusBtn" class="btn-primary">Update Status</button>
+                <button id="deleteAppBtn" class="btn-danger">Delete Application</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

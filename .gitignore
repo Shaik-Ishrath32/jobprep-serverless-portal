@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables (if you add any)
+.env
+.env.local
+
+# AWS credentials and configuration (never commit these!)
+*.pem
+*.key
+aws-credentials.json
+config.js
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build files
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp

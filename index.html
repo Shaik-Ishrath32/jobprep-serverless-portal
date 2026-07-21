@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPrep - Careers Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 4h4v3h-4V4zm10 16H4V9h16v11z" fill="currentColor"/>
+                </svg>
+                <span>JobPrep</span>
+                <span class="subtitle">CAREERS PORTAL</span>
+            </div>
+            <button class="admin-btn" onclick="window.location.href='admin.html'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="currentColor"/>
+                </svg>
+                Admin panel
+            </button>
+        </header>
+
+        <div class="hero">
+            <div class="badge">⭐ WE'RE HIRING</div>
+            <h1>Join our <span class="gradient-text">team</span></h1>
+            <p class="subtitle-text">We're looking for passionate people to help us build the future.<br>Fill out the form below and we'll be in touch.</p>
+        </div>
+
+        <div class="form-container">
+            <div class="step-indicator">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Personal</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Professional</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Documents</span>
+                </div>
+            </div>
+
+            <form id="jobApplicationForm">
+                <div class="section-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="currentColor"/>
+                    </svg>
+                    PERSONAL INFORMATION
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">FULL NAME *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL ADDRESS *</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">PHONE NUMBER *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">POSITION *</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select position</option>
+                            <option value="Software Engineer">Software Engineer</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
+                            <option value="Full Stack Developer">Full Stack Developer</option>
+                            <option value="DevOps Engineer">DevOps Engineer</option>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="Product Manager">Product Manager</option>
+                            <option value="UI/UX Designer">UI/UX Designer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 4h4v3h-4V4zm10 16H4V9h16v11z" fill="currentColor"/>
+                    </svg>
+                    PROFESSIONAL DETAILS
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="experience">YEARS OF EXPERIENCE *</label>
+                        <input type="number" id="experience" name="experience" min="0" max="50" placeholder="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">HIGHEST EDUCATION *</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select education</option>
+                            <option value="High School">High School</option>
+                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                            <option value="Master's Degree">Master's Degree</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">KEY SKILLS *</label>
+                    <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, Python, AWS, React" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">LINKEDIN PROFILE (OPTIONAL)</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                </div>
+
+                <div class="section-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="currentColor"/>
+                    </svg>
+                    DOCUMENTS
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">UPLOAD RESUME *</label>
+                    <div class="file-upload">
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        <div class="file-upload-label">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                            </svg>
+                            <span>Choose file or drag here</span>
+                            <small>PDF, DOC, DOCX (Max 5MB)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="btnText">Submit Application</span>
+                    <span id="btnLoader" class="loader" style="display: none;"></span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

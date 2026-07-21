@@ -1,0 +1,31 @@
+{
+  "name": "job-application-system",
+  "version": "1.0.0",
+  "description": "Serverless job application portal with AWS Lambda, DynamoDB, and S3",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "echo 'Upload files to S3 manually or use AWS CLI'",
+    "sync-frontend": "aws s3 sync . s3://your-job-application-website/ --exclude 'lambda-*' --exclude 'node_modules/*' --exclude '.git/*' --exclude '*.md' --exclude 'package.json'",
+    "create-bucket": "aws s3 mb s3://your-job-application-website",
+    "enable-website": "aws s3 website s3://your-job-application-website/ --index-document index.html --error-document index.html"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "dynamodb",
+    "s3",
+    "serverless",
+    "job-application",
+    "api-gateway"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
